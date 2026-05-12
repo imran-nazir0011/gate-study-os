@@ -16,88 +16,45 @@ This repository functions as a modular, state-of-the-art preparation operating s
 
 ```mermaid
 graph TD
-    Root[Master OS: GATE DA & CSE] --> Core[Core Strategy & Priorities]
-    Root --> Time[Time & Energy Management]
-    Root --> Engines[Execution & Revision Engines]
-    Root --> Roadmaps[Multi-Year Master Roadmaps]
-    Root --> Targets[Granular Monthly Targets]
-    Root --> Templates[Execution Templates]
-    Root --> Subjects[Subject Mastery Architecture]
-    Root --> Final[Final Phase & Simulation Mastery]
-
-    subgraph Core Strategy & Priorities
-        C1[00_master_strategy.md]
-        C2[01_exam_analysis.md]
-        C3[02_subject_priority.md]
-        C4[14_tools_and_resources.md]
+    Root[Master Preparation OS: Dual GATE Architecture]
+    
+    subgraph Layer 1: Strategy & Alignment
+        Strat[Core Strategy & Priorities<br>Files 00, 01, 02, 14]
+        Time[Time & Energy Systems<br>Files 03, 04, 05, 12, 13]
     end
 
-    subgraph Time & Energy Management
-        T1[03_time_management_system.md]
-        T2[04_weekday_strategy.md]
-        T3[05_weekend_strategy.md]
-        T4[12_burnout_prevention.md]
-        T5[13_motivation_and_consistency.md]
+    subgraph Layer 2: Core Execution Engines
+        Engines[Revision, Mocks & Defect Engines<br>Files 06, 07, 08, 09, 10, 11]
     end
 
-    subgraph Execution & Revision Engines
-        E1[06_revision_system.md]
-        E2[07_mock_test_strategy.md]
-        E3[08_backlog_recovery.md]
-        E4[09_note_making_system.md]
-        E5[10_error_log_system.md]
-        E6[11_pyq_strategy.md]
+    subgraph Layer 3: Multi-Year Master Roadmaps
+        Roadmaps[DA & CSE Roadmaps 2027/2028<br>Files 15, 16, 17, 18]
+        Targets[Granular Monthly Targets<br>Files 19, 20, 21]
+        Routines[Weekly & Daily Micro-Templates<br>Files 22, 23]
     end
 
-    subgraph Multi-Year Master Roadmaps
-        R1[15_gate_da_2027_roadmap.md]
-        R2[16_gate_cse_2027_roadmap.md]
-        R3[17_gate_da_2028_roadmap.md]
-        R4[18_gate_cse_2028_roadmap.md]
+    subgraph Layer 4: Deep Technical Mastery
+        Subjects[Subject-Specific Modules<br>Files 24 to 34]
     end
 
-    subgraph Granular Monthly Targets
-        M1[19_monthly_targets_2026.md]
-        M2[20_monthly_targets_2027.md]
-        M3[21_monthly_targets_2028.md]
+    subgraph Layer 5: Terminal Consolidation
+        Final[Test Series, Tapering & Exam Strategy<br>Files 35 to 40]
+        Outcomes[Post-GATE PSU & Interview Defense<br>File 41]
     end
 
-    subgraph Execution Templates
-        Tmp1[22_weekly_templates.md]
-        Tmp2[23_daily_templates.md]
-    end
-
-    subgraph Subject Mastery Architecture
-        S1[24_subjectwise_resources.md]
-        S2[25_math_for_da.md]
-        S3[26_programming_foundation.md]
-        S4[27_algorithms_mastery.md]
-        S5[28_operating_systems.md]
-        S6[29_dbms.md]
-        S7[30_cn.md]
-        S8[31_toc_and_compiler.md]
-        S9[32_dsa_for_gate.md]
-        S10[33_machine_learning_for_gate_da.md]
-        S11[34_ai_and_data_science_strategy.md]
-    end
-
-    subgraph Final Phase & Simulation Mastery
-        F1[35_test_series_execution.md]
-        F2[36_rank_improvement_strategy.md]
-        F3[37_final_6_months_strategy.md]
-        F4[38_last_60_days_strategy.md]
-        F5[39_last_30_days_strategy.md]
-        F6[40_exam_day_strategy.md]
-        F7[41_interview_and_psu_options.md]
-    end
-
-    Core --> Time
+    Root --> Strat
+    Strat --> Engines
     Time --> Engines
     Engines --> Roadmaps
     Roadmaps --> Targets
-    Targets --> Templates
-    Templates --> Subjects
+    Targets --> Routines
+    Routines --> Subjects
     Subjects --> Final
+    Final --> Outcomes
+
+    style Root fill:#1d3557,stroke:#457b9d,stroke-width:2px,color:#fff
+    style Subjects fill:#1f3a27,stroke:#2ecc71,stroke-width:2px,color:#fff
+    style Outcomes fill:#5c3a21,stroke:#f39c12,stroke-width:2px,color:#fff
 ```
 
 ---
