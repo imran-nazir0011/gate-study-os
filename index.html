@@ -28,6 +28,7 @@
       border-radius: 8px;
       border: 1px solid #e9ecef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      overflow-x: auto;
     }
     
     /* Modern layout overrides */
@@ -45,7 +46,11 @@
 <body>
   <div id="app">Initializing GATE Master OS client side engine...</div>
   
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
+    // Initialize Mermaid globally before Docsify starts
+    mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
     window.$docsify = {
       name: 'GATE Master OS',
       repo: 'https://github.com/imran-nazir0011/gate-study-os',
@@ -62,7 +67,30 @@
         buttonText : 'Copy Code',
         errorText  : 'Error',
         successText: 'Copied'
-      }
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return ('<div class="mermaid">' + code + '</div>');
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            if (typeof mermaid !== "undefined") {
+              mermaid.run({
+                querySelector: '.mermaid'
+              }).catch(function(e) {
+                console.error("Mermaid parsing exception:", e);
+              });
+            }
+          });
+        }
+      ]
     }
   </script>
   
@@ -73,10 +101,5 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  
-  <!-- Mermaid compilation engine -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>
 </body>
 </html>
