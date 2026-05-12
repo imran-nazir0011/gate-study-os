@@ -16,45 +16,25 @@ This repository functions as a modular, state-of-the-art preparation operating s
 
 ```mermaid
 graph TD
-    Root[Master Preparation OS: Dual GATE Architecture]
-    
-    subgraph Layer 1: Strategy & Alignment
-        Strat[Core Strategy & Priorities<br>Files 00, 01, 02, 14]
-        Time[Time & Energy Systems<br>Files 03, 04, 05, 12, 13]
-    end
+    A["🎯 Master Preparation OS — GATE DA & CSE 2027 & 2028"]
+    B["📌 Layer 1 — Strategy & Foundation<br/>Master Strategy · Exam Analysis · Subject Priority · Resources"]
+    C["⏳ Layer 2 — Time & Energy Systems<br/>Time Mgmt · Weekday · Weekend · Burnout Prevention · Motivation"]
+    D["⚙️ Layer 3 — Execution Engines<br/>Revision · Mock Tests · Backlog · Notes · Error Log · PYQ"]
+    E["📅 Layer 4 — Master Roadmaps & Routines<br/>DA/CSE Roadmaps · Monthly Targets · Weekly & Daily Templates"]
+    F["📚 Layer 5 — Subject Mastery Modules<br/>Math · Programming · DSA · OS · DBMS · CN · TOC · ML · AI"]
+    G["🏁 Layer 6 — Final Phase Execution<br/>Test Series · Rank Strategy · Last 60 Days · Last 30 Days · Exam Day"]
+    H["🏛️ Layer 7 — Post-GATE Career Outcomes<br/>IIT/IISc Research · MS/PhD Panels · PSU Interview Defense"]
 
-    subgraph Layer 2: Core Execution Engines
-        Engines[Revision, Mocks & Defect Engines<br>Files 06, 07, 08, 09, 10, 11]
-    end
+    A --> B --> C --> D --> E --> F --> G --> H
 
-    subgraph Layer 3: Multi-Year Master Roadmaps
-        Roadmaps[DA & CSE Roadmaps 2027/2028<br>Files 15, 16, 17, 18]
-        Targets[Granular Monthly Targets<br>Files 19, 20, 21]
-        Routines[Weekly & Daily Micro-Templates<br>Files 22, 23]
-    end
-
-    subgraph Layer 4: Deep Technical Mastery
-        Subjects[Subject-Specific Modules<br>Files 24 to 34]
-    end
-
-    subgraph Layer 5: Terminal Consolidation
-        Final[Test Series, Tapering & Exam Strategy<br>Files 35 to 40]
-        Outcomes[Post-GATE PSU & Interview Defense<br>File 41]
-    end
-
-    Root --> Strat
-    Strat --> Engines
-    Time --> Engines
-    Engines --> Roadmaps
-    Roadmaps --> Targets
-    Targets --> Routines
-    Routines --> Subjects
-    Subjects --> Final
-    Final --> Outcomes
-
-    style Root fill:#1d3557,stroke:#457b9d,stroke-width:2px,color:#fff
-    style Subjects fill:#1f3a27,stroke:#2ecc71,stroke-width:2px,color:#fff
-    style Outcomes fill:#5c3a21,stroke:#f39c12,stroke-width:2px,color:#fff
+    style A fill:#1d3557,stroke:#457b9d,stroke-width:2px,color:#fff
+    style B fill:#2d4a7a,stroke:#457b9d,stroke-width:2px,color:#fff
+    style C fill:#1f3a5f,stroke:#4a90d9,stroke-width:2px,color:#fff
+    style D fill:#1a3a4a,stroke:#4a90d9,stroke-width:2px,color:#fff
+    style E fill:#1f3a27,stroke:#2ecc71,stroke-width:2px,color:#fff
+    style F fill:#2d3a1a,stroke:#a3cb38,stroke-width:2px,color:#fff
+    style G fill:#3a2d1a,stroke:#f39c12,stroke-width:2px,color:#fff
+    style H fill:#5c3a21,stroke:#e67e22,stroke-width:2px,color:#fff
 ```
 
 ---
